@@ -1,4 +1,4 @@
-# name: widget-topAsked
+# name: widget-topasked
 # version: 0.1
 # authors: SMHassanAlavi
 
