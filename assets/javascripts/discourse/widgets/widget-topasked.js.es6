@@ -7,9 +7,9 @@ import { popupAjaxError } from 'discourse/lib/ajax-error';
 
 
 
-export default createWidget('widget-topAsked', {
-  tagName: 'div.widget-topAsked.widget-container',
-  buildKey: (attrs) => 'widget-topAsked',
+export default createWidget('widget-topasked', {
+  tagName: 'div.widget-topasked.widget-container',
+  buildKey: (attrs) => 'widget-topasked',
 
   defaultState(attrs) {
     return {
