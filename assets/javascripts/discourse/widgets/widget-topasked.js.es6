@@ -7,9 +7,9 @@ import { popupAjaxError } from 'discourse/lib/ajax-error';
 
 
 
-export default createWidget('widget-topAsked', {
-  tagName: 'div.widget-topAsked.widget-container',
-  buildKey: (attrs) => 'widget-topAsked',
+export default createWidget('widget-topasked', {
+  tagName: 'div.widget-topasked.widget-container',
+  buildKey: (attrs) => 'widget-topasked',
 
   defaultState(attrs) {
     return {
@@ -56,15 +56,15 @@ getData(){
                 self.state.data = res[i];
                 self.state.contents.push(h("div.top-askedBlock",[h("img.avatar.topAvater", {attributes: 
                     {src: url, title:username, alt:'', width: 32, height: 32}}),h("a.top-asked-link.link-widget",{attributes: 
-                        {href: "/t/" + res[i].topic.slug + "/" + res[i].topic.id }},
+                        {href: "/t/" + res[i].topic.slug + "/" + res[i].topic.id}},
                         h("span.top-asked-title.title-widget", res[i].title))]));
                 counter++;
                 id = res[19].id;
                 self.state.contents.push(h("br"));
-                if (counter == 5)
+                if (counter == 7)
                     break;
             }
-            if (counter > 4 )
+            if (counter > 6 )
             {
                 self.state.contents.push(h("a.moreAsked",{attributes:{href:"/groups/top/activity/topics"}},I18n.t("main.more-asked")));
                 self.scheduleRerender();
@@ -100,10 +100,10 @@ getData(){
                         counter++;
                         id = res[19].id;
                         self.state.contents.push(h("br"));
-                        if (counter == 5)
+                        if (counter == 7)
                             break;
                     }
-                    if (counter >4)
+                    if (counter >6)
                     {
                         self.state.contents.push(h("a.moreAsked",{attributes:{href:"/groups/top/activity/topics"}},I18n.t("main.more-asked")));
                         self.scheduleRerender();
@@ -140,7 +140,7 @@ getData(){
                                 counter++;
                                 id = res[19].id;
                                 self.state.contents.push(h("br"));
-                                if (counter == 5)
+                                if (counter == 7)
                                     break;
                             }
                             self.state.contents.push(h("a.moreAsked",{attributes:{href:"/groups/top/activity/topics"}},I18n.t("main.more-asked")));
