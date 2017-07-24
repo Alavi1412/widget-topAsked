@@ -57,7 +57,7 @@ getData(){
                 self.state.contents.push(h("div.top-askedBlock",[h("img.avatar.topAvater", {attributes: 
                     {src: url, title:username, alt:'', width: 32, height: 32}}),h("a.top-asked-link.link-widget",{attributes: 
                         {href: "/t/" + res[i].topic.slug + "/" + res[i].topic.id}},
-                        h("span.top-asked-title.title-widget", res[i].title))]));
+                        res[i].title)]));
                 counter++;
                 id = res[19].id;
                 self.state.contents.push(h("br"));
@@ -96,7 +96,7 @@ getData(){
                         self.state.contents.push(h("div.top-askedBlock",[h("img.avatar.topAvater", {attributes: 
                             {src: url, title:username, alt:'', width: 32, height: 32}}),h("a.top-asked-link.link-widget",{attributes: 
                                 {href: "/t/" + res[i].topic.slug + "/" + res[i].topic.id }},
-                                h("span.top-asked-title.title-widget", res[i].title))]));
+                                res[i].title)]));
                         counter++;
                         id = res[19].id;
                         self.state.contents.push(h("br"));
@@ -136,7 +136,7 @@ getData(){
                                 self.state.contents.push(h("div.top-askedBlock",[h("img.avatar.topAvater", {attributes: 
                                     {src: url, title:username, alt:'', width: 32, height: 32}}),h("a.top-asked-link.link-widget",{attributes: 
                                         {href: "/t/" + res[i].topic.slug + "/" + res[i].topic.id }},
-                                        h("span.top-asked-title.title-widget", res[i].title))]));
+                                        res[i].title)]));
                                 counter++;
                                 id = res[19].id;
                                 self.state.contents.push(h("br"));
@@ -161,7 +161,7 @@ html(attrs, state) {
     if (state.loaded == false)
     {
         //state.contents.push(temp);
-        state.contents.push(h("span.top-asked.header-widget",I18n.t("main.top-asked")));
+        state.contents.push(h("h1.top-asked.header-widget",I18n.t("main.top-asked")));
         this.getData();
     }
     return h('div.widget-inner', state.contents);
