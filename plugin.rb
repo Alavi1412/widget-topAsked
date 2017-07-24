@@ -2,6 +2,7 @@
 # version: 0.1
 # authors: SMHassanAlavi
 
+register_asset 'stylesheets/widget-topAsked.scss'
 
 after_initialize do
   SiteSetting.class_eval do
