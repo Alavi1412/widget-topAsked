@@ -5,7 +5,7 @@
 register_asset 'stylesheets/widget-topAsked.scss'
 
 after_initialize do
-  SiteSetting.class_eval do
-    @choices[:layouts_sidebar_right_widgets].push('widget-topasked')
-  end
+  #SiteSetting.class_eval do
+  #  @choices[:layouts_sidebar_right_widgets].push('widget-topasked')
+  #end
 end
